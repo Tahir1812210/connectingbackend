@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CanceledError } from './services/api-client';
 import userService, { User } from './services/user-service';
 
@@ -6,7 +6,6 @@ const App = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [error, setError] = useState<string | undefined>('');
   const [Loading, setLoading] = useState(false);
-  const controller = useRef<AbortController | null>(null);
 
   useEffect(() => {
     setLoading(true);
