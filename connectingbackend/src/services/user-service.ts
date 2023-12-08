@@ -8,4 +8,4 @@ export interface User {
 
 
 
-export default create('/')
+export default create('/users')
